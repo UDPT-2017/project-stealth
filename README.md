@@ -1,4 +1,4 @@
-# Project - *Name of your app*
+# Project - *Web Bán Hàng*
 
 **Name of your app** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
