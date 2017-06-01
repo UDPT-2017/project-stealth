@@ -1,11 +1,11 @@
-# Project - *Web Bán Hàng*
+# Project - *Web Blog*
 
 **Name of your app** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
 * [X] **1412183** - Phạm Quốc Hoàng - phamquochoang - rimokatoji.95@gmail.com - Tỉ lệ đóng góp cho đề tài
 * [X] **1412199** - Hà Ngọc Huy - 1412199 - email - Tỉ lệ đóng góp cho đề tài
-* [ ] **MSSV3** - Tên sinh viên 3 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
+* [X] **1412558** - Phạm Quốc Toàn - yamakuga - bossdiemmaimai@gmail.com - Tỉ lệ đóng góp cho đề tài
 * [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 
 URL: **URL hosting của đề tài**
@@ -16,9 +16,9 @@ Báo cáo: **URL Github Page của đề tài**
 Trong đề tài, sinh viên cần mô tả các chức năng có thể thực hiện bên dưới. Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Làm việc nhóm:
-* [ ] Có sử dụng GIT.
-* [ ] Sử dụng GIT theo Centralized Workflow.
-* [ ] Sử dụng GIT theo Feature Branch Workflow.
+* [x] Có sử dụng GIT.
+* [x] Sử dụng GIT theo Centralized Workflow.
+* [x] Sử dụng GIT theo Feature Branch Workflow.
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 ## Mô tả nghiệp vụ chung ứng dụng

@@ -1,0 +1,21 @@
+Database Credentials
+
+Get credentials for manual connections to this database.
+
+Cancel
+Please note that these credentials are not permanent.
+Heroku rotates credentials periodically and updates applications where this database is attached.
+
+Host
+ec2-23-23-234-118.compute-1.amazonaws.com
+Database
+d8b6m9d1liq89u
+User
+lwmgviiupbtjmi
+Port
+5432
+Password
+0b1ce804c5c6b68077d9c53748baa141bfc2c4b4bd64074a05683b5df3586a9a
+URI
+postgres://lwmgviiupbtjmi:0b1ce804c5c6b68077d9c53748baa141bfc2c4b4bd64074a05683b5df3586a9a@ec2-23-23-234-118.compute-1.amazonaws.com:5432/d8b6m9d1liq89uHeroku CLI
+heroku pg:psql postgresql-curved-20824 --app galaxy-blog

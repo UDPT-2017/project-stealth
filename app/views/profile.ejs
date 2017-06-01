@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <!-- d?c c?u hình thi?t b?-->
+    <title>Home</title>
+    <!-- th? vi?n font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="pull-right">
+					<ul class="parent">
+						<div>
+							<% if (user) { %>
+                        		<span>Hello! </span>
+                        		<strong><img src="<%= user.user_avatar %>" alt="avatar" style="width: 30px; height: 30px"><%= user.user_name %></strong>
+                        		<a href="/logout" style="color: #999"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    		<% } %>
+
+                    		<% if (!user) { %>
+								<a href="/login" style="color: #999"><span class="glyphicon glyphicon-user"></span> Login </a> | 
+								<a href="/signup" style="color: #999"><span class="glyphicon glyphicon-pencil"></span> SignUp </a>
+                    		<% } %>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end row -->
+		
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+						<span class="sr-only">Toggle navigation</span> 
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+						</button>
+                    </div>
+					<!-- navbar collapse -->
+					<div class="collapse navbar-collapse" id="collapse">
+						<ul class="nav navbar-nav navbar-left"> <!-- navbar nam bên trái-->
+							<li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+							<li><a href="/messages"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
+							<li><a href="/users"><span class="glyphicon glyphicon-user"></span> Users </a></li>
+							<li><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
+						</ul>
+					</div>
+                
+                    <ol class="breadcrumb">
+                        <li class="active">Home</li>
+                    </ol>
+                </nav>
+            </div>
+			<!-- end  col-md-12-->
+        </div>
+		<!-- end  row-->    
+			<div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                
+               <% if (user) { %>  
+
+                    <div class="page-header text-center">
+                        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+                        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <div class="well">
+                                <h3><img class="" src="<%= user.user_avatar %>" alt="no avatar" style="width: 70px; height: 70px"></h3>
+                                  
+                                    <div style="word-wrap:break-word">
+                                        <strong>id</strong>: <%= user.user_id %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong>name</strong>: <%= user.user_name %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong>email</strong>: <%= user.user_email %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong>phone</strong>: <%= user.user_ %>
+                                    </div>
+                                        
+                                    <div style="word-wrap:break-word">
+                                        <strong>password</strong>: <%= user.user_pwuser %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong >FB tokken</strong>: <%= user.user_facebook_token %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong>FB id</strong>: <%= user.user_facebook_id %>
+                                    </div>
+
+                                    <div style="word-wrap:break-word">
+                                        <strong>FB Link</strong>:<a href="<%= user.facebook_link %>"><%= user.user_facebook_link %></a>
+                                    </div>
+                                 
+                            </div>
+                        </div>
+                    </div>
+             <% } %>
+
+               </div>
+			</div>
+		<!-- footer--> 
+		<div class="row">
+			<div class="col-md-12">
+				<div class="text-center">
+					<ul class="list-inline banner-social-buttons">
+					<li><a href="https://twitter.com"><i class="fa fa-twitter-square" style="color:blue; font-size:48px"></i></a></li>
+					<li><a href="https://plus.google.com"><i class="fa fa-google-plus-official" style="color:red; font-size:48px"></i> </a></li>
+					<li><a href="https://facebook.com/langtudatinh2060"><i class="fa fa-facebook-official" style="color:blue; font-size:48px"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<p class="copyright">2017 Powered By Blue Group, Theme By Bootstrap</p>
+			</div>	
+			<!-- end col-md-12 -->
+		</div>
+		<!-- end row -->
+
+    </div>
+    <!-- end container -->
+</body>
+</html>
