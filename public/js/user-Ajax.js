@@ -1,10 +1,12 @@
-<script>
-    $(document).ready(function(){
-    	$("#user").click(function(e){
-			var url,data;
-    			
-    		
-		});
+$(document).ready(function(){
+	$("#user").click(function(e){
+		var url,data;
+			
+		
+	});
 
-    });
-</script>
+	$("#button").click(function(e){
+		alert("Trinh duyet cua ban da bi hong!");
+	});
+
+});
