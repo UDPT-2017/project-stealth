@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include ../partials/head %>
+<link rel="stylesheet" href="../../.././css/breadcrumb.css">
+<title>USERS</title>
+</head>
+<body>
+<div class ="container">
+<% include ../partials/greeting-user-bar %>
+<% include ../partials/navbar %>
+<div class ="row">
+  <div class="col-lg-12">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li class="active">Home</li>
+        <li class>\Users</li>
+    </ol>
+  </div>
+</div>
+<div class="row" id="user">
+
+<% users_list.rows.forEach(function(item1){ %>
+
+    <div class="col-md-6" style="margin-bottom: 50px;">
+          <div class="" style="border-radius: 10px; background: #DDDDDD">
+            <div class="row">
+              <div class="col-md-2">
+                <img src="<%= item1.user_avatar %>" class="w3-circle" style="height:60px;width:60px" alt="Avatar">
+              </div>
+              <div class="col-md-8">
+                <h4><%= item1.user_name %></h4>
+              <h6><%= item1.user_email %></h6>
+              </div>
+
+              <div class="col-md-2 w3-center">
+
+
+<% var flag='true'%>
+      <% friends_list.rows.forEach(function(item2){ %>
+        <% if (item2.friend_id == item1.user_id) { %>
+            <a class="" title="Remove Friend" href="/friends/remove-friend/friend-id=<%= item2.friend_id %>"><i class="fa fa-remove"></i></a>
+            <% flag = 'flase'%>
+            <%return%>
+              <% }
+
+                %>
+      <% }); %>
+
+      <% if (flag=='true') { %>
+            <a class="" title="Add Friend" href="/friends/add-friend/friend-id=<%= item1.user_id %>"><i class="fa fa-check"></i></a>
+              <% }
+
+                %>
+
+            </div>
+            </div>
+
+          </div>
+    </div>
+<% }); %>
+</div>
+<% include ../partials/social-icon-banner %>
+<% include ../partials/footer %>
+<!-- </div>
+
+<input id="button" type='button' value='Query MySQL'/>
+</div> -->
+</div>
+</body>
+</html>

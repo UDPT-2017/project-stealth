@@ -1,6 +1,6 @@
 var homeController = {
 	index: function(req, res){
-		res.render('index.ejs');
+		res.render('./pages/index');
 	}
 };
 module.exports = homeController;

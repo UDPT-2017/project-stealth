@@ -1,13 +1,13 @@
 // app/routes.js
 module.exports = function(app, passport, pool, controllers) {
-	
+
 
 	// =====================================
 	// LOGIN ===============================
 	// =====================================
 	// show the login form
 	app.get('/login', isLogged, function(req, res) {
-		res.render('login.ejs', { message: req.flash('loginMessage') });
+		res.render('./pages/login', { message: req.flash('loginMessage') });
 	});
 
 	// process the login form
@@ -33,7 +33,7 @@ module.exports = function(app, passport, pool, controllers) {
 	// show the signup form
 	app.get('/signup', function(req, res) {
 		// render the page and pass in any flash data if it exists
-		res.render('signup.ejs', { message: req.flash('signupMessage') });
+		res.render('./pages/signup', { message: req.flash('signupMessage') });
 	});
 
 	// process the signup form
@@ -67,19 +67,19 @@ module.exports = function(app, passport, pool, controllers) {
     // =====================================
     // route for facebook authentication and login
 	app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
-	app.get('/auth/facebook/callback', 
-	  	passport.authenticate('facebook', { 
+	app.get('/auth/facebook/callback',
+	  	passport.authenticate('facebook', {
 	  	successRedirect: '/messages/inbox-messages',
-	    failureRedirect: '/login' 
+	    failureRedirect: '/login'
 	}));
-    
+
 
 
 	app.get('/', controllers.home.index);
 
 	app.get('/about', controllers.about.index);
 
-	
+
 	app.get('/friends/remove-friend/friend-id=:id', isLoggedIn, controllers.friends.remove);
 	app.get('/friends/add-friend/friend-id=:id', isLoggedIn, controllers.friends.add);
 
@@ -94,7 +94,7 @@ module.exports = function(app, passport, pool, controllers) {
 
 	app.get('/messages/new-messages', isLoggedIn, controllers.messages.new);
 	app.post('/messages/new-messages', isLoggedIn, controllers.messages.postNew);
-	
+
 	app.get('/messages/sent-messages', isLoggedIn, controllers.messages.sent);
 
 	app.get('/messages/friends', isLoggedIn, controllers.messages.friend);

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include ../partials/head %>
+<style type="text/css" media="screen">
+.container {
+display: table;
+vertical-align: middle;
+width: 350px;
+height: 400px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+      <form action="signup" method="POST" accept-charset="utf-8">
+          <h1 class="text-center"><i class="fa fa-user-circle"></i></h1>
+          <% if (message.length > 0) { %>
+              <div class="alert alert-danger"><%= message %></div>
+          <% } %>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                  <input class="form-control" placeholder="Full Name: Tèo Đập Chai" type="text" id="fullname" name="fullname" required autofocus>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
+                  <input class="form-control" placeholder="Email: bossdiemmaimai@gmail.com" type="email" id="email" name="email" required autofocus>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
+                  <input class="form-control" placeholder="Phone: 1234567890" type="tel" id="phone" name="phone" required autofocus pattern="[0-9]{10,11}" title="">
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                  <input class="form-control" placeholder="******" type="password" id="password" name="password" required autofocus>
+              </div>
+          </div>
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">SignUp</button>
+              <hr>
+              <p class="text-center"><a href="/login">Login now!</a></p>
+              <p class="text-center"><a href="/">Home page</a></p>
+          </div>
+          <div class="form-group">
+              <h3>...Login with:</h3>
+              <div class="text-center">
+                  <a class="btn btn-link-1 btn-link-1-facebook" href="/auth/facebook"><i class="fa fa-facebook"></i>Facebook</a>
+              </div>
+          </div>
+      </form>
+  </div>
+</body>

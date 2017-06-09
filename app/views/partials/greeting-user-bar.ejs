@@ -1,0 +1,22 @@
+<div class="row">
+    <header style=" background-color: black">
+    <div class="container" style=" background-color: black">
+      <div class="header-right pull-right">
+        <ul class="parent" style="color: white">
+          <div>
+            <% if (user) { %>
+                          <span>Hello! </span>
+                          <strong><img src="<%= user.user_avatar %>" alt="avatar" style="width: 30px; height: 30px"><%= user.user_name %></strong>
+                          <a href="/logout" style="color: #999"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                      <% } %>
+
+                      <% if (!user) { %>
+              <a href="/login" style="color: #999"><span class="glyphicon glyphicon-user"></span> Login </a> |
+              <a href="/signup" style="color: #999"><span class="glyphicon glyphicon-pencil"></span> SignUp </a>
+                      <% } %>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>

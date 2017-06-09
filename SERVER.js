@@ -19,7 +19,8 @@ var controllers = require('./app/controllers');
 const pool = require('./config/database');
 // configuration ===============================================================
 // connect to our database
-app.use(express.static("public"));
+//app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 require('./config/passport')(passport, pool, controllers); // pass passport for configuration
 
 
@@ -32,7 +33,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs'); // set up ejs for templating
-app.set('views', path.resolve('./app/views')); // set up ejs for templating
+//app.set('views', path.resolve('./app/views')); // set up ejs for templating
+app.set('views', __dirname + '/app/views');
 // required for passport
 app.use(session({
 	secret: 'kuga',
@@ -56,6 +58,4 @@ require('./app/routes/routes.js')(app, passport, pool, controllers); // load our
 
 // launch ======================================================================
 app.listen(port);
-console.log('The magic happens on port ' + port);
-
-
+console.log('server start on port ' + port);

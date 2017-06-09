@@ -1,8 +1,8 @@
 module.exports = {
 
     'facebookAuth' : {
-        'clientID'      : '730093200484614', // your App ID
-        'clientSecret'  : '9748b8320e64ab900ac6e51eca80b82c', // your App Secret
+        'clientID'      : '1997505573811443', // your App ID
+        'clientSecret'  : '1c42fedb07b64735c6da97fb935ab703', // your App Secret
 		'callbackURL'       : 'http://localhost:8888/auth/facebook/callback'
         //'callbackURL'   : 'https://lab02-1412558-1412657.herokuapp.com/auth/facebook/callback'
     },
