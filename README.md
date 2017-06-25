@@ -9,7 +9,7 @@ Thành viên:
 * [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 
 URL: **URL hosting của đề tài**
-Báo cáo: **URL Github Page của đề tài**
+Báo cáo: **https://github.com/UDPT-2017/project-stealth.wiki.git**
 
 ## Yêu cầu
 
