@@ -3,7 +3,7 @@
 **Name of your app** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
-* [X] **1412183** - Phạm Quốc Hoàng - phamquochoang - rimokatoji.95@gmail.com - Tỉ lệ đóng góp cho đề tài
+* [X] **1412183** - Phạm Quốc Hoàng - phamquochoang - rimokatoji.95@gmail.com - 30%
 * [X] **1412199** - Hà Ngọc Huy - 1412199 - email - Tỉ lệ đóng góp cho đề tài
 * [X] **1412558** - Phạm Quốc Toàn - yamakuga - bossdiemmaimai@gmail.com - Tỉ lệ đóng góp cho đề tài
 * [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
