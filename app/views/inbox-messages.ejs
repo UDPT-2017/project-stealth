@@ -32,7 +32,7 @@
 <body>
     <div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" style="background-color: black;color: white;">
 				<div class="header_right pull-right">
 					<ul class="parent">
 						<div>
@@ -55,31 +55,7 @@
 		
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
-						<span class="sr-only">Toggle navigation</span> 
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-						</button>
-                    </div>
-					<!-- navbar collapse -->
-					<div class="collapse navbar-collapse" id="collapse">
-						<ul class="nav navbar-nav navbar-left"> <!-- navbar năm bên trái-->
-							<li><a href="/"><span class="glyphicon glyphicon-home"></span> Home </a></li>
-							<li class="active"><a href="/messages"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
-							<li><a href="/users/"><span class="glyphicon glyphicon-user"></span> Users </a></li>
-							<li><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
-						</ul>
-					</div>
-                
-                    <ol class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-						<li><a href="/messages">Messages</a></li>
-						<li class="active">Inbox Messages</li>
-                    </ol>
-                </nav>
+               <% include ./partials/navbar %>
             </div>
 			<!-- end  col-md-12-->
         </div>
@@ -87,7 +63,7 @@
 		
 		<div class="row">
             <div class="col-md-3">
-				<div class="navbar-collapse navbar-default well" id="sidebar">
+				<div class="navbar-collapse navbar-inverse well" id="sidebar">
 					<ul class="nav nav-list">
 						<li><a href="/messages/inbox-messages"><i class="fa fa-envelope"></i> Inbox Messages </a></li>
 						<li><a href="/messages/new-messages"><i class="fa fa-send"></i> New Messages </a></li>
