@@ -26,23 +26,23 @@ Phần mô tả đặt vào đây
 
 ## Lập trình server
 ### MVC
-* [ ] MVC (MSSV1)
-* [ ] Config (MSSV1)
-* [ ] REST routing (MSSV1)
-* [ ] Layout & partial (MSSV1)
+* [X] MVC (1412183-1412199-1412558)
+* [X] Config (1412183-1412199-1412558)
+* [X] REST routing (1412183-1412199-1412558)
+* [X] Layout & partial (1412183-1412199-1412558)
 
 ### Lập trình dữ liệu
 * [ ] Thêm (MSSV1)
 * [ ] Xóa (MSSV1)
 * [ ] Sửa (MSSV1)
-* [ ] Tìm kiếm (MSSV1)
+* [X] Tìm kiếm (1412183)
 
 ### Xử lý lỗi
 * [ ] Xử lý lỗi trong cùng trang web (MSSV1)
-* [ ] Xử lý lỗi dùng trang web riêng (MSSV1)
+* [X] Xử lý lỗi dùng trang web riêng (MSSV1)
    * [ ] 401 (MSSV1)
-   * [ ] 404 (MSSV1)
-   * [ ] 500 (MSSV1)
+   * [X] 404 (1412183)
+   * [X] 500 (1412183)
 
 ### Tương tác API khác
 Liệt kê các API nhóm đã sử dụng được ở đây
@@ -53,7 +53,7 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 ## Lập trình client
 * [ ] Kiểm tra dữ liệu (MSSV1)
 * [ ] Animation (MSSV1)
-* [ ] Thao tác DOM (MSSV1)
+* [X] Thao tác DOM (1412183-1412199-1412558)
 * [ ] AJAX (MSSV1)
 
 ## Bảo mật
