@@ -79,6 +79,9 @@ Link ảnh GIF demo ứng dụng:
 * Demo 1
 ![Video Walkthrough](demos1.gif)
 
+* Demo 2
+![Video Walkthrough](demo_blogs.gif)
+
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
 
