@@ -4,4 +4,5 @@ module.exports = {
 	users: require('./usersModels'),
 	//home: require('./homeController'),
 	friends: require('./friendsModels'),
+	blogs: require('./blogsModels'),
 };

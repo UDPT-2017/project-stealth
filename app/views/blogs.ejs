@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="row">
+			<header style=" background-color: black">
+			<div class="container" style=" background-color: black">
+				<div class="header-right pull-right">
+					<ul class="parent" style="color: white">
+						<div>
+							<% if (user) { %>
+                        		<span>Hello! </span>
+                        		<strong><img src="<%= user.user_avatar %>" alt="avatar" style="width: 30px; height: 30px"><%= user.user_name %></strong>
+                        		<a href="/logout" style="color: #999"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    		<% } %>
+
+                    		<% if (!user) { %>
+								<a href="/login" style="color: #999"><span class="glyphicon glyphicon-user"></span> Login </a> |
+								<a href="/signup" style="color: #999"><span class="glyphicon glyphicon-pencil"></span> SignUp </a>
+                    		<% } %>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</header>
+	</div>
+
+    <div class="container">
+        <div class="row">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+                    </div>
+					<!-- navbar collapse -->
+					<div class="collapse navbar-collapse" id="collapse">
+						<ul class="nav navbar-nav navbar-left"> <!-- navbar nam bên trái-->
+							<li><a href="/"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+							<li class="active"><a href="/blogs"><span class="glyphicon glyphicon-heart"></span> Blogs </a></li>
+							<li><a href="/messages"><span class="glyphicon glyphicon-envelope"></span> Messages </a></li>
+							<li><a href="/users"><span class="glyphicon glyphicon-user"></span> Users </a></li>
+              				<li><a href="/album"><span class="glyphicon glyphicon-picture"></span> Album</a></li>
+							<li><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> About </a></li>
+						</ul>
+					</div>
+
+                    <ol class="breadcrumb">
+                        <li class="active">Blogs</li>
+                    </ol>
+                </nav>
+        </div>
+		<!-- end  row-->
+
+		<div class="row">
+			<div class="newpost col-lg-8 col-md-8 col-sm-8 col-xs-8" style="background: #F4F4F4">
+				<form class="form-group" action="" method="POST" enctype="application/x-www-form-urlencoded">
+					<label for="comment">Lời muốn nói:</label>
+						<textarea class="form-control" rows="3" id-"trthai" name="trthai"></textarea>
+					<button type="submit" class="btn btn-default">Đăng</button>
+				</form>
+			</div>
+			<div class="post-list col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<div clas="post-content">
+					<% post.rows.forEach(function(po){ %>
+					<div class="post" style="margin-top:50px; background: #F4F4F4">
+						<div class="avatar col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							<a href="#"><img src=<%= po.avatar%> alt="avatar"/></a>
+						</div>
+						<div class="name" style="margin-left: 10px">
+							<a href="#"><b><%= po.yname%></b></a>
+						</div>
+						<div class"time">
+							<p> <%=po.time.getDate()%> tháng <%=po.time.getMonth()+1%> lúc <%=po.time.getHours%> giờ <%=po.time.getMinutes%> phút </p>
+						</div>
+						<div class="content-post">
+							<p> <%=po.content.substr(0,100)%></p>
+							<% if(po.content.substr(100, 1)) { %>
+								<p>... <a href="/blogs/postId<%= po.idp%>">Xem thêm</a></p>
+							<% } %>
+							<% if(po.image_path) { %>
+								<img src=<%= po.image_path%> class="img-thumbnail" width="800" height="400" alt="image-post"/>
+							<% } %>
+							<p> <%= po.views%> lượt xem</p>
+						</div>
+						<div class="navbar navbar-default" role="navigation">
+							<div class="collapse navbar-collapse" id="collapse">
+								<ul class="nav navbar-nav navbar-left">
+									<li><a href="/blogs/postId<%= po.idp%>"><span class="glyphicon glyphicon-edit"></span> Bình luận </a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span> Thích </a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-share-alt"></span> Chia sẻ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<% }); %>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<strong><hr><strong>
+			<div class="text-center">
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="https://twitter.com"><i class="fa fa-twitter-square" style="color:blue; font-size:40px"></i></a></li>
+					<li><a href="https://plus.google.com"><i class="fa fa-google-plus-official" style="color:red; font-size:40px"></i> </a></li>
+					<li><a href="https://facebook.com/langtudatinh2060"><i class="fa fa-facebook-official" style="color:blue; font-size:40px"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+    </div>
+    	<!--end container  -->
+	<div class="row" style="background-color: black">
+		<p class="copyright">2017 Powered By Blue Group, Theme By Bootstrap</p>
+	</div>
+</body>
+</html>

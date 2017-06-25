@@ -98,6 +98,13 @@ module.exports = function(app, passport, pool, controllers) {
 	app.get('/messages/sent-messages', isLoggedIn, controllers.messages.sent);
 
 	app.get('/messages/friends', isLoggedIn, controllers.messages.friend);
+
+	app.get('/blogs', controllers.blogs.index);
+	app.post('/blogs', controllers.blogs.new_post);
+	
+	app.get('/blogs/postId:id', controllers.blogs.show_post);
+	app.post('/blogs/postId:id', controllers.blogs.new_comment);
+	
 }; // end export
 
 
