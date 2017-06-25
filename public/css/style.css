@@ -4,7 +4,9 @@ body {
 	margin: 0;
 	padding-bottom: 0px;
 	padding-top: 0;
-	background-color: #006699;
+	background: #093028;
+    background: -webkit-linear-gradient(to right, #093028, #237a57);
+    background: linear-gradient(to right, #093028, #237a57);
 	/*background-image: url("../img/background-mountain1920x1080.jpg");*/
 	/*background-repeat: repeat;*/
     /*background-position: center;*/

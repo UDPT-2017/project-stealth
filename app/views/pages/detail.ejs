@@ -1,24 +1,27 @@
  <!DOCTYPE html>
  <head>
- <<title><DETAIL IMAGE</DETAILS></title>
- 	<% include ../partials/head %>
+ <title>DETAIL IMAGE</title>
+ 		<% include ../partials/head %>
  	<style >
  		.imgEntire{
  			margin-top: 30px;
  		}
  	</style>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  </head>
  <html>
 <body>
+<% include ../partials/greeting-user-bar %>
 <% include ../partials/navbar %>
-<div class="container">    
+<div class="container-fluid" style="margin-bottom: 40px;text-align: center;">    
   <div class="row imgEntire">
-  <div class="col col-md-4">
-    <img src="<%= imgKQ.image_src %>" style="width: 100%;height: 100%;" >
+  <div class="col col-lg-12">
+    <img src="<%= imgKQ.image_src %>" style="width: 80%;height: 80%;" >
   </div>
 
   </div>
 </div>
-<% include ../partials/footer %>
 </body>
 </html>
