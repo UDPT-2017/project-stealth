@@ -29,7 +29,7 @@ var AlbumController = {
 			if(!err){
 				// console.log(JSON.stringify(result));
 				console.log(result);
-				res.render('page/home',{list:result})
+				res.render('page/homeAlbum',{list:result})
 			}
 		});
 

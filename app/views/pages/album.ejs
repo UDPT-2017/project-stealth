@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <head>
+ 	<% include ../partial/head %>
+ </head>
+ <html>
+<body>
+<% include ../partial/navbar %>
+<div class="container-fluid text-center">    
+  <div class="row content">
+  	<div class="col-sm-2 sidenav category-album">
+       <ul>
+       <% list.forEach(function(ele) { %>
+       <li>
+        <a href= "/album/<%= ele.album_id %>" id = "refEntireAl"><%= ele.album_title %></a>
+        <span class="badge">  <%= ele.count %></span>
+        </li>
+        <% }); %>
+        <li><a href="/mostview">Most Views</a></li>
+        </ul>
+    </div>
+  	 <div class="col-sm-8 text-left main-content"> 
+  	   <div class="row" id = "image-content">
+       <!-- <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script> -->
+       <% listImg.forEach(function(ele) { %>
+         <div class="col-md-6">
+           <div class="thumbnail">
+              <a href="/album/image/<%= ele.image_id %>" >
+                  <img src="<%= ele.image_src %>"" alt="Not FOUND">
+                <div class="caption" style="font-size: 18px; overflow: hidden;">
+                  <p><button class="btn btn-lg btn-success"><span class=" glyphicon glyphicon-picture">Title</span></button> <%= ele.image_title %></p>
+                  <p><button class="btn btn-lg btn-danger"><span class=" glyphicon glyphicon-search">Views</span></button> <%= ele.view %></p>
+               </div>
+              </a>
+          </div>
+        </div>
+         <% }); %>
+        </div>
+  	 </div>
+  	<% include ../partial/rightsidebar %>
+  </div>
+ </div>
+</div>
+<% include ../partial/footer %>
+</body>
+</html>

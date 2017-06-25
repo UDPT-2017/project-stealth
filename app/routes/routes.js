@@ -104,6 +104,29 @@ module.exports = function(app, passport, pool, controllers) {
 	
 	app.get('/blogs/postId:id', controllers.blogs.show_post);
 	app.post('/blogs/postId:id', controllers.blogs.new_comment);
+
+	app.get('/album', controllers.album.list);
+	app.get('/album/:id',controllers.album.imageBeLongTo);
+	app.get('/album/image/:id', controllers.album.viewDetailPic);
+	app.get('/mostview', controllers.album.ImagesMostview);
+	// catch 404 and forward to error handler
+	app.use(function(req, res, next) {
+	  var err = new Error('Not Found');
+	  err.status = 404;
+	  next(err);
+	});
+
+	// error handler
+	app.use(function(err, req, res, next) {
+	  // set locals
+	  res.locals.message = err.message;
+	  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+	  // render the error page
+	  res.status(err.status || 500);
+	  res.render('page/error');
+	});
+
 	
 }; // end export
 

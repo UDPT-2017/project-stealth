@@ -5,4 +5,5 @@ module.exports = {
 	home: require('./homeController'),
 	friends: require('./friendsController'),
 	blogs: require('./blogsController'),
+	album: require('./album')
 };

@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <head>
+ 	<% include ../partial/head %>
+ </head>
+ <html>
+<body>
+<% include ../partial/navbar %>
+<div class="container-fluid text-center">    
+  <div class="row content">
+  	<div class="col-sm-2 sidenav category-album">
+      <ul>
+       <% list.forEach(function(ele) { %>
+       <li>
+        <a href= "/album/<%= ele.album_id %>" id = "refEntireAl"><%= ele.album_title %></a>
+        <span class="badge">  <%= ele.count %></span>
+        </li>
+        <% }); %>
+        <li><a href="/mostview">Most Views</a></li>
+        </ul>
+
+    </div>
+  	 <div class="col-sm-8 text-left main-content"> 
+  	   <div class="row" id = "image-content">
+       <!-- <script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script> -->
+        </div>
+  	 </div>
+  	<% include ../partial/rightsidebar %>
+  </div>
+ </div>
+</div>
+<% include ../partial/footer %>
+</body>
+</html>
