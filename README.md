@@ -47,7 +47,7 @@ Phần mô tả đặt vào đây
 
 ### Tương tác API khác
 Liệt kê các API nhóm đã sử dụng được ở đây
-* [ ] Facebook API: mô tả (MSSV1)
+* [ ] Facebook API: dùng Facebook passport để đăng nhập, lấy thông tin người dùng từ facebook (1412558)
 * [ ] Google API: mô tả (MSSV1)
 * [ ] ...
 
@@ -58,8 +58,8 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 * [ ] AJAX (MSSV1)
 
 ## Bảo mật
-* [ ] Chứng thực (MSSV1)
-* [ ] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau (MSSV1)
+* [x] Chứng thực. dùng facebook và local authentication để đăng nhập (1412558)
+* [ ] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau.(MASV1)
    * [ ] Không cho phép thao tác vào trang web khi không có quyền (MSSV1)
    * [ ] Thể hiện các chức năng khác nhau trên cùng giao diện khi người dùng có quyền khác nhau (MSSV1)
    * [ ] Thể hiện lỗi khi không truy xuất được trang khi không có quyền (MSSV1)
