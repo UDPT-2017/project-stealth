@@ -1,0 +1,36 @@
+<head>
+ 	<% include ../partials/head %>
+ </head>
+ <style>
+ 	body{
+ 		margin-top: 12px;
+ 		 background: url("img/Moss.jpg") no-repeat fixed center; 
+ 	}
+ </style>
+<body>
+<div class="container">
+<div class = row>
+	<div class="col col-lg-12" style="text-align: center;">
+			  <h1 style="font-size:88px;color: yellow;"><%= error.status %></h1>
+			  <h2 style="font-size:66px;font-style: italic;color: pink"><%= message %></h2>
+			  <p style="font-size: 24px;">
+			  	<button class="btn btn-lg btn-danger">
+			  		<span class="glyphicon glyphicon-home"></span>
+			  	</button> TAKE ME HOME
+			  	<button class="btn btn-lg btn-info" style="margin-left: 20px;">
+			  		<span class="glyphicon glyphicon-envelope"></span>
+			  	</button> CONTACT US
+			  </p>
+			  
+	</div>
+
+<div class = row>
+	<div class="col col-lg-12">
+		<pre style="font-size:18px;">
+				<%= error.stack %> >
+			 </pre>
+	</div>
+</div>
+</div>
+</div>
+</body>

@@ -124,7 +124,7 @@ module.exports = function(app, passport, pool, controllers) {
 
 	  // render the error page
 	  res.status(err.status || 500);
-	  res.render('page/error');
+	  res.render('pages/error');
 	});
 
 	

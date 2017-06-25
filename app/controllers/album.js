@@ -1,5 +1,5 @@
 //CONTROLLER
-var Album = require('../model/Album');
+var Album = require('../models/Album');
 	
 var AlbumController = {
 	ImagesMostview: function(req, res){
@@ -17,7 +17,7 @@ var AlbumController = {
 				console.log("THIS IS LIST IMGS");
 				console.log(result2);
 				console.log("/THIS IS LIST IMGS");
-				res.render('page/mostview', {list:result1, listImg:result2	});
+				res.render('pages/mostview', {list:result1, listImg:result2	});
 			}
 		});
 			}
@@ -29,7 +29,7 @@ var AlbumController = {
 			if(!err){
 				// console.log(JSON.stringify(result));
 				console.log(result);
-				res.render('page/homeAlbum',{list:result})
+				res.render('pages/homeAlbum',{list:result})
 			}
 		});
 
@@ -42,7 +42,7 @@ var AlbumController = {
 				Album.getImageBeLongTo(req.params.id, function(err, result){
 			if(!err){
 				result2 = result;
-				res.render('page/album', {list:result1, listImg:result2	});
+				res.render('pages/album', {list:result1, listImg:result2	});
 			}
 		});
 			}
@@ -60,7 +60,7 @@ var AlbumController = {
 						console.log("UPDATED VIEWS");
 					}
 				});
-				res.render('page/detail', {imgKQ : result});
+				res.render('pages/detail', {imgKQ : result});
 
 			}
 		});

@@ -1,5 +1,6 @@
 //MODEL
-var pool = require('../../config/dbconfig');
+// var pool = require('../../config/dbconfig');
+const pool= require('../../config/database');
 
 var album = {
 	getAll: function(callback){
